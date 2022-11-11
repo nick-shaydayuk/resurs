@@ -14,13 +14,6 @@
         <p :class="$bem({ e: 'text' })"><slot name="text5"></slot></p>
       </div>
     </div>
-    <div :class="$bem({ e: 'photo-container' })">
-      <template v-for="image in images" v-bind:key="image">
-        <div :class="$bem({ e: 'photo' })">
-          <img :src="image.path" :alt="image.path" />
-        </div>
-      </template>
-    </div>
     <carousel :settings="carouselSettings">
       <slide v-for="image in images" v-bind:key="image">
         <img
@@ -63,6 +56,9 @@ export default defineComponent({
         },
         1280: {
           itemsToShow: 3.7,
+        },
+        1440: {
+          itemsToShow: 4,
         },
       },
     };

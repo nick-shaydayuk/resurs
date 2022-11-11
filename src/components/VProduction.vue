@@ -76,6 +76,9 @@ export default defineComponent({
     padding: 50px 30px 30px 30px;
     /* gap: 150px; */
   }
+  @media (min-width: 1440px) {
+    padding: 80px 230px 30px 230px;
+  }
   &__heading {
     font-family: "Oswald", sans-serif;
     font-style: normal;
@@ -120,8 +123,10 @@ export default defineComponent({
       grid-template-columns: repeat(7, 88px);
       grid-template-rows: repeat(7, 122px);
       gap: 30px 30px;
+      transform: scale(1);
       img {
         border-radius: 40px 0;
+        transform: scale(1);
       }
     }
   }

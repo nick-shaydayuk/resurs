@@ -28,9 +28,14 @@
       </div>
       <div :class="$bem({ e: 'image-container' })">
         <img
-          :src="contactsImage.path"
-          :alt="contactsImage.path"
-          :class="$bem({ e: 'contacts-img' })"
+          :src="contactsImage2.path"
+          :alt="contactsImage2.path"
+          :class="$bem({ e: 'contacts-img2' })"
+        />
+        <img
+          :src="contactsImage1.path"
+          :alt="contactsImage1.path"
+          :class="$bem({ e: 'contacts-img1' })"
         />
       </div>
     </div>
@@ -57,13 +62,18 @@ export default defineComponent({
       { path: require("@/assets/photo3.png"), alt: "img" },
       { path: require("@/assets/photo4.png"), alt: "img" },
     ];
-    const contactsImage = {
-      path: require("@/assets/quality.jpg"),
-      alt: "qualityImg",
+    const contactsImage1 = {
+      path: require("@/assets/contacts1.jpg"),
+      alt: "contacts1Img",
+    };
+    const contactsImage2 = {
+      path: require("@/assets/contacts2.jpg"),
+      alt: "contacts2Img",
     };
     return {
       images,
-      contactsImage,
+      contactsImage1,
+      contactsImage2,
     };
   },
 });
@@ -139,14 +149,48 @@ export default defineComponent({
       height: 298px;
       margin-top: 10px;
     }
+    @media (min-width: 1280px) {
+      width: 700px;
+      height: 345px;
+    }
+    @media (min-width: 1440px) {
+      width: 800px;
+      height: 345px;
+    }
   }
-  &__contacts-img {
+  &__contacts-img2 {
     width: 100%;
     height: 100%;
     border-radius: 40px 0;
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
+    @media (min-width: 1280px) {
+      width: 387px;
+      height: 247px;
+      z-index: 2;
+    }
+    @media (min-width: 1440px) {
+      width: 440px;
+      height: 280px;
+    }
+  }
+  &__contacts-img1 {
+    display: none;
+    @media (min-width: 1280px) {
+      display: block;
+      width: 387px;
+      height: 247px;
+      border-radius: 40px 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+    @media (min-width: 1440px) {
+      width: 440px;
+      height: 280px;
+    }
   }
   &__map {
     padding-top: 30px;

@@ -49,6 +49,12 @@ export default defineComponent({
       flex-direction: row;
       align-items: flex-end;
     }
+    @media (min-width: 1440px) {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
   }
   &__heading-container {
     display: flex;

@@ -61,6 +61,13 @@ export default defineComponent({
   justify-content: space-between;
   @media (min-width: 1024px) {
     flex-direction: row;
+    padding-bottom: 20vh;
+  }
+  @media (min-width: 1280px) {
+    padding-top: 50px;
+  }
+  @media (min-width: 1440px) {
+    padding: 35px 230px 25vh 230px;
   }
   &__container {
     display: flex;
@@ -101,6 +108,9 @@ export default defineComponent({
       @media (min-width: 1280px) {
         width: 283px;
       }
+      @media (min-width: 1440px) {
+        width: 322px;
+      }
     }
   }
   &__text {
@@ -129,6 +139,10 @@ export default defineComponent({
     }
     @media (min-width: 1280px) {
       width: 699px;
+      height: 590px;
+    }
+    @media (min-width: 1280px) {
+      width: 792px;
       height: 590px;
     }
   }
