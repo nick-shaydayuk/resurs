@@ -78,6 +78,7 @@ export default defineComponent({
   }
   @media (min-width: 1440px) {
     padding: 80px 230px 30px 230px;
+    height: 100vh;
   }
   &__heading {
     font-family: "Oswald", sans-serif;
@@ -89,6 +90,9 @@ export default defineComponent({
     margin: 0;
     display: inline-block;
     padding-bottom: 32px;
+    @media (min-width: 1280px) {
+      padding-bottom: 12px;
+    }
   }
   &__container {
     display: flex;

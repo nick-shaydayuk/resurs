@@ -85,6 +85,9 @@ export default defineComponent({
   max-width: 1380px;
   margin: 0 auto;
   padding: 35px 15px 0;
+  @media (min-width: 1280px) {
+    height: 100vh;
+  }
   &__container {
     display: flex;
     flex-direction: row;

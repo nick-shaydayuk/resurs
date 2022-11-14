@@ -59,15 +59,16 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
   @media (min-width: 1024px) {
     flex-direction: row;
-    padding-bottom: 20vh;
   }
   @media (min-width: 1280px) {
-    padding-top: 50px;
+    padding: 50px 15px 0;
+    height: 100vh;
   }
   @media (min-width: 1440px) {
-    padding: 35px 230px 25vh 230px;
+    padding: 80px 230px 30px 230px;
   }
   &__container {
     display: flex;
