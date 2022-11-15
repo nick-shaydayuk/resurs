@@ -101,8 +101,11 @@ export default defineComponent({
       max-width: 595px;
     }
     @media (min-width: 1024px) {
-      padding-top: 300px;
+      padding-top: 230px;
       max-width: 595px;
+    }
+    @media (min-width: 1440px) {
+      padding-top: 300px;
     }
   }
 }
