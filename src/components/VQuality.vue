@@ -105,6 +105,7 @@ export default defineComponent({
   }
   &__photo {
     img {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
       width: 158px;
       @media (min-width: 768px) {
         width: 216px;
