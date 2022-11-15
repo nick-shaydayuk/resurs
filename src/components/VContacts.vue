@@ -21,7 +21,9 @@
           <a href="tel:+79268789779" :class="$bem({ e: 'text' })"
             >+7 (926) 878 97 79</a
           >
-          <a href="mailto:Resurs9@mail.ru" :class="$bem({ e: 'text' })"
+          <a
+            href="mailto:Resurs9@mail.ru"
+            :class="$bem({ e: 'text', m: 'last' })"
             >Resurs9@mail.ru</a
           >
         </div>
@@ -84,10 +86,17 @@ export default defineComponent({
   flex-direction: column;
   max-width: 1380px;
   margin: 0 auto;
-  padding: 35px 15px 0;
+  padding: 35px 30px 0;
   @media (min-width: 1280px) {
-    height: 100vh;
+    box-sizing: border-box;
   }
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 50px 30px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: row;
@@ -98,7 +107,6 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding-top: 32px;
     @media (min-width: 1024px) {
       max-width: 434px;
     }
@@ -137,7 +145,7 @@ export default defineComponent({
     color: #333333;
     margin: 0;
     text-decoration: none;
-    &:last-child {
+    &--last {
       text-decoration: underline;
       padding-top: 15px;
       display: inline-block;
@@ -166,16 +174,20 @@ export default defineComponent({
     height: 100%;
     border-radius: 40px 0;
     position: absolute;
-    top: 100px;
+    top: 0;
     left: 0;
     @media (min-width: 1280px) {
       width: 387px;
       height: 247px;
       z-index: 2;
+      top: 50px;
     }
     @media (min-width: 1440px) {
       width: 440px;
       height: 280px;
+    }
+    @media (min-width: 1600px) {
+      top: 100px;
     }
   }
   &__contacts-img1 {
@@ -200,11 +212,19 @@ export default defineComponent({
     width: 100%;
     height: 45vh;
     position: relative;
-    /* position: absolute;
     bottom: 0;
-    left: 0; */
+    @media (min-width: 1280px) {
+      position: absolute;
+      top: 450vh;
+      width: 100vw;
+      padding-top: 0;
+    }
+    @media (min-width: 1440px) {
+      top: 445vh;
+    }
+
+    left: 0;
     iframe {
-      position: relative;
       border: none;
       width: 100%;
       height: 100%;

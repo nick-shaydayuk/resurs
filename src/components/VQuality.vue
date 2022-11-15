@@ -54,7 +54,6 @@ export default defineComponent({
 </script>
 <style lang="scss">
 .v-quality {
-  background: #eaeaea;
   padding: 35px 15px 50px;
   display: flex;
   flex-direction: column;
@@ -68,7 +67,11 @@ export default defineComponent({
     height: 100vh;
   }
   @media (min-width: 1440px) {
-    padding: 80px 230px 30px 230px;
+    padding: 80px 30px 30px 30px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
   &__container {
     display: flex;
@@ -154,6 +157,9 @@ export default defineComponent({
     position: absolute;
     top: 0;
     left: 0;
+    @media (min-width: 1440px) {
+      left: -55px;
+    }
   }
 }
 </style>

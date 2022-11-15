@@ -73,12 +73,16 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 35px 15px 30px;
+  padding: 35px 15px 50px;
   max-width: 1380px;
   margin: 0 auto;
   @media (min-width: 1440px) {
-    padding: 80px 230px 30px 230px;
+    /* padding: 80px 230px 30px 230px; */
+    padding: 80px 30px 0;
+    max-width: 1440px;
+    margin: 0 auto;
     height: 100vh;
+    box-sizing: border-box;
   }
   &__heading {
     font-family: "Oswald", sans-serif;
@@ -105,6 +109,9 @@ export default defineComponent({
     @media (min-width: 1280px) {
       padding-bottom: 36px;
     }
+    /* @media (min-width: 1440px) {
+      justify-content: space-between;
+    } */
   }
   &__text-container {
     display: flex;
@@ -132,6 +139,9 @@ export default defineComponent({
     }
     @media (min-width: 1280px) {
       max-width: 600px;
+    }
+    @media (min-width: 1440px) {
+      max-width: 675px;
     }
   }
   &__photo-container {

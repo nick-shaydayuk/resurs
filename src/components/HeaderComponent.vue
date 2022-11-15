@@ -244,6 +244,7 @@ export default defineComponent({
     height: 100%;
     padding: 0 25px;
     align-items: center;
+    box-sizing: border-box;
   }
 
   &__logo {

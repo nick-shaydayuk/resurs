@@ -64,9 +64,9 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 35px 25px 30px;
+  padding: 35px 25px 50px;
   gap: 30px;
-  background-color: #f5f5f5;
+
   @media (min-width: 768px) {
     padding: 50px 30px 30px 30px;
   }
@@ -74,11 +74,14 @@ export default defineComponent({
     flex-direction: row;
     justify-content: space-between;
     padding: 50px 30px 30px 30px;
-    /* gap: 150px; */
   }
   @media (min-width: 1440px) {
-    padding: 80px 230px 30px 230px;
+    padding: 80px 30px 30px 30px;
     height: 100vh;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
   &__heading {
     font-family: "Oswald", sans-serif;

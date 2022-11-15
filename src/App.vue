@@ -85,9 +85,18 @@ body {
   @media (min-width: 1280px) {
     height: 100vh;
     scroll-snap-align: start;
+    &:last-of-type {
+      height: auto;
+    }
   }
   &:first-of-type {
     height: 100vh;
   }
+}
+.color2 {
+  background-color: #f5f5f5;
+}
+.color3 {
+  background-color: #eaeaea;
 }
 </style>
